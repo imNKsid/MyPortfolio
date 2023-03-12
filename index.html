@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/c62bdcb191.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/nklogo.png" class="logo" />
+          <ul id="sidemenu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Full Stack Developer</p>
+          <h1>
+            Hi, I'm <span> Nitesh Kumar </span> from <br />
+            Jharkhand, India
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------about-------- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/nkuser.png" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              A responsible, committed and motivated Software Engineer with a
+              get it done on time attitude.
+            </p>
+            <p>
+              Currently working as a Jr. Software Engineer in SpurTree
+              Technologies, Bangalore, India. Here, I enhanced my skills as a
+              Full stack developer by working on few technologies like React
+              Native, Node JS and React JS.
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>React Native</span><br />Building cross platform mobile
+                  applications which can run on both Android/iOS.
+                </li>
+                <li>
+                  <span>React JS</span><br />Developing web pages and
+                  interfaces. Familiar with Redux concepts.
+                </li>
+                <li>
+                  <span>Node JS</span><br />Building APIs so that the
+                  functionalities from Front-end side can trigger.
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>SpurTree Technologies (Exp - 1 year 5 months)</span
+                  ><br />Working as a Jr. Software Engineer dedicately working
+                  on several projects, created multiple apps.
+                </li>
+                <li>
+                  <span>Acronton Infotech (Exp - 3 months)</span><br />Worked as
+                  an Intern on the domain of Python and Machine Learning.
+                </li>
+                <li>
+                  <span>Teaching (Exp - 6 months)</span><br />Used to teach some
+                  of my classmates and juniors in my free time. Also taught as a
+                  Comuter teacher in a Primary School during the lockdown
+                  period.
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>B. Tech, CSE (2021)</span><br />Sri Krishna Institute of
+                  Technology, Bangalore<br />8.46/10
+                </li>
+                <li>
+                  <span>Senior Secondary, 12th (2017)</span><br />D.A.V. Public
+                  School, Tapin North, Jharkhand<br />78.2%
+                </li>
+                <li>
+                  <span>Secondary, 10th (2015)</span><br />D.A.V. Public School,
+                  Tapin North, Jharkhand<br />8.8/10
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -----services-----  -->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-brands fa-app-store-ios"></i>
+            <h2>App Development</h2>
+            <p>
+              Want to create your own app? Consider giving me a chance. Worth
+              your money and trust.
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-crop-simple"></i>
+            <h2>Web Development</h2>
+            <p>
+              Want to create your own website? Consider giving me a chance.
+              Worth your money and trust.
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Javascript</h2>
+            <p>
+              Want to create your own app? Consider giving me a chance. Worth
+              your money and trust.
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------portfolio-------- -->
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="images/work-1.png" />
+            <div class="layer">
+              <h3>Social Media App</h3>
+              <p>
+                The app connects you to the talented people around the world.
+              </p>
+              <a href="#"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-2.png" />
+            <div class="layer">
+              <h3>Music App</h3>
+              <p>
+                This app connects you to the music in your every mood. Just
+                listen to it.
+              </p>
+              <a href="#"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-3.png" />
+            <div class="layer">
+              <h3>Online Shopping App</h3>
+              <p>
+                This app gives you an option to shop the products you like at
+                your convenient price.
+              </p>
+              <a href="#"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+      </div>
+    </div>
+
+    <!-- -------contact-------- -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <a href="mailto:imnksid@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              imnksid@gmail.com
+            </a>
+            <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/niteshnk/">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/imNKsid">
+                <i class="fa-brands fa-square-github"></i>
+              </a>
+              <a href="https://twitter.com/imNKsid">
+                <i class="fa-brands fa-square-twitter"></i>
+              </a>
+              <a href="https://www.instagram.com/nk123_quotes/">
+                <i class="fa-brands fa-square-instagram"></i>
+              </a>
+            </div>
+            <a
+              href="images/nk-resume.pdf"
+              target="_blank"
+              download="Nitesh Resume"
+              class="btn btn2"
+            >
+              Look at my Resume
+            </a>
+          </div>
+          <div class="contact-right">
+            <form>
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>Copyright &copy Nitesh. Made with <i class="fa-solid fa-heart"></i> by Nitesh Kumar</i></p>
+    </div>
+
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+
+    <script>
+      var sidemenu = document.getElementById('sidemenu');
+
+      function openmenu(){
+        sidemenu.style.right = '0';
+      }
+
+      function closemenu(){
+        sidemenu.style.right = '-200px';
+      }
+    </script>
+  </body>
+</html>
