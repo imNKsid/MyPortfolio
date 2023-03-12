@@ -5,40 +5,42 @@
   box-sizing: border-box;
 }
 body {
-  background: #080808;
+  background: #000;
   color: #fff;
+  /* overflow-x: hidden; */
+  flex: 1;
 }
 #header {
-  width: 80%;
-  height: 90vh;
-  margin-left: 305px;
-  background-image: url(images/bg.png);
-  background-size: cover;
-  background-position: center;
-  margin-top: 143px;
+  /* width: 90%; */
+  height: 100vh;
+  /* margin-left: 20%; */
+  background-image: url("images/bg.png");
+  background-size: contain;
+  background-position: 100% 90%;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  /* margin-top: 10%; */
 }
 .container {
-  margin-left: -20%;
-  margin-top: -70px;
-  /* padding: 30px 0;
-  margin-left: 21%;
-  margin-top: 5%; */
+  margin-left: 5%;
+  /* margin-top: -70px; */
 }
 nav {
   display: flex;
   position: relative;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-right: 10%;
+  /* margin-right: 10%; */
 }
 .logo {
-  width: 380px;
-  margin-top: -5%;
+  /* width: 380px; */
+  /* margin-top: -5%; */
   margin-left: -2%;
 }
 nav ul {
-  padding-top: -20%;
-  margin-top: -6%;
+  /* padding-top: -20%;
+  margin-top: -6%; */
+  margin-right: 60px;
 }
 nav ul li {
   display: inline-block;
@@ -79,7 +81,7 @@ nav ul li a:hover::after {
 
 /* -------about--------- */
 #about {
-  margin-left: 310px;
+  /* margin-left: 20%; */
   padding-top: 180px;
   padding-bottom: 50px;
   color: #ababab;
@@ -148,9 +150,10 @@ nav ul li a:hover::after {
 
 /* -----Services----- */
 #services {
-  padding: 30px 0;
-  margin-left: 21%;
-  margin-top: 5%;
+  /* margin-left: 20%; */
+  padding-top: 180px;
+  padding-bottom: 50px;
+  color: #ababab;
 }
 .services-list {
   display: grid;
@@ -193,9 +196,13 @@ nav ul li a:hover::after {
 
 /* -----My Projects----- */
 #portfolio {
-  padding: 30px 0;
+  /* margin-left: 20%; */
+  padding-top: 180px;
+  padding-bottom: 50px;
+  color: #ababab;
+  /* padding: 30px 0;
   margin-left: 21%;
-  margin-top: 5%;
+  margin-top: 5%; */
 }
 .work-list {
   display: grid;
@@ -272,9 +279,10 @@ nav ul li a:hover::after {
 
 /* -----Contact----- */
 #contact {
-  padding: 30px 0;
-  margin-left: 21%;
-  margin-top: 5%;
+  /* margin-left: 20%; */
+  padding-top: 180px;
+  padding-bottom: 50px;
+  color: #ababab;
 }
 .contact-left {
   flex-basis: 35%;
@@ -358,7 +366,7 @@ form .btn2 {
   padding: 25px 0;
   background: #262626;
   font-weight: 300;
-  margin-top: 7%;
+  margin-top: 10%;
 }
 .copyright i {
   color: #ff004f;
@@ -366,4 +374,59 @@ form .btn2 {
 }
 nav .fa-solid {
   display: none;
+}
+
+/* ----------- CSS for Small screen ------------ */
+
+@media only screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+  #header {
+    background-image: url(images/phone-bg.png);
+  }
+  .header-text {
+    margin-top: 10%;
+    font-size: 16px;
+  }
+  .header-text h1 {
+    font-size: 30px;
+  }
+  nav .fa-solid {
+    display: block;
+    font-size: 25px;
+  }
+  nav ul {
+    background: #ff004f;
+    position: fixed;
+    top: 10;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+  }
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+  nav ul .fa-solid {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+  nav ul .fa-solid .fa-xmark {
+    position: absolute;
+    top: 55px;
+    left: 25px;
+    cursor: pointer;
+  }
+  .copyright {
+    /* width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300; */
+    margin-top: 80%;
+  }
 }
