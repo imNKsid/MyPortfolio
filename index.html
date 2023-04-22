@@ -16,13 +16,14 @@
       <div class="container">
         <nav>
           <img src="images/nklogo.png" class="logo" />
+          <img src="images/nkMobileLogo.png" class="logoMobile" />
           <ul id="sidemenu">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Portfolio</a></li>
             <li><a href="#">Contact</a></li>
-            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
           </ul>
           <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
@@ -31,6 +32,10 @@
           <h1>
             Hi, I'm <span> Nitesh Kumar </span> from <br />
             Jharkhand, India
+          </h1>
+          <h1>
+            I'm currently working as a <br /> 
+            <span> Software Engineer </span> in <br /> Bangalore, India
           </h1>
         </div>
       </div>
@@ -60,6 +65,9 @@
               <p class="tab-links active-link" onclick="opentab('skills')">
                 Skills
               </p>
+              <!-- <p class="tab-links" onclick="opentab('projects')">
+                Projects
+              </p> -->
               <p class="tab-links" onclick="opentab('experience')">
                 Experience
               </p>
@@ -81,10 +89,50 @@
                 </li>
               </ul>
             </div>
+            <!-- <div class="tab-contents" id="projects">
+              <ul>
+                <li>
+                  <span>YouTube Clone</span>
+                  <br />Made a YouTube clone app using React Native and its various libraries.
+                </li>
+                <li>
+                  <span>Portfolio Website</span>
+                  <br />Made a simple yet effective portfolio website to showcase my skills, 
+                  where you're seeing this.
+                </li>
+                <li>
+                  <span>Animations</span>
+                  <br />Made two animations, one <a href="https://imnksid.github.io/Animation/animation.htm" target="_blank">simple</a> 
+                  and another <a href="https://imnksid.github.io/Animation/complexAnimation.html" target="_blank">complex</a> using 
+                  simple HTML, CSS and JavaScript.
+                </li>
+                <li>
+                  <span>Created various tiny projects</span>
+                  <br />
+                  <ul>
+                    <li style="list-style-type:square">
+                      <a href="https://imnksid.github.io/Calendar/" target="_blank">
+                        Calendar
+                      </a>
+                    </li>
+                    <li style="list-style-type:square"> 
+                      <a href="https://imnksid.github.io/Calculator/" target="_blank">
+                        Neuromorphism Calculator 
+                      </a>
+                    </li>
+                    <li style="list-style-type:square">
+                      <a href="https://imnksid.github.io/DigitalClock/" target="_blank">
+                        Digital Clock
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div> -->
             <div class="tab-contents" id="experience">
               <ul>
                 <li>
-                  <span>SpurTree Technologies (Exp - 1 year 5 months)</span
+                  <span>SpurTree Technologies (Exp - 1 year 10 months)</span
                   ><br />Working as a Jr. Software Engineer dedicately working
                   on several projects, created multiple apps.
                 </li>
@@ -211,22 +259,22 @@
         <div class="row">
           <div class="contact-left">
             <h1 class="sub-title">Contact Me</h1>
-            <a href="mailto:imnksid@gmail.com">
+            <a href="mailto:imnksid@gmail.com" target="_blank">
               <i class="fa-solid fa-envelope"></i>
               imnksid@gmail.com
             </a>
             <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
             <div class="social-icons">
-              <a href="https://www.linkedin.com/in/niteshnk/">
+              <a href="https://www.linkedin.com/in/niteshnk/" target="_blank">
                 <i class="fa-brands fa-linkedin"></i>
               </a>
-              <a href="https://github.com/imNKsid">
+              <a href="https://github.com/imNKsid" target="_blank">
                 <i class="fa-brands fa-square-github"></i>
               </a>
-              <a href="https://twitter.com/imNKsid">
+              <a href="https://twitter.com/imNKsid" target="_blank">
                 <i class="fa-brands fa-square-twitter"></i>
               </a>
-              <a href="https://www.instagram.com/nk123_quotes/">
+              <a href="https://www.instagram.com/nk123_quotes/" target="_blank">
                 <i class="fa-brands fa-square-instagram"></i>
               </a>
             </div>
@@ -286,11 +334,11 @@
       var sidemenu = document.getElementById('sidemenu');
 
       function openmenu(){
-        sidemenu.style.right = '0';
+        sidemenu.style.right = '-100px';
       }
 
       function closemenu(){
-        sidemenu.style.right = '-200px';
+        sidemenu.style.right = '-260px';
       }
     </script>
   </body>
