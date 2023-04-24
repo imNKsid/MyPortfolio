@@ -4,6 +4,9 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: #000;
   color: #fff;
@@ -364,7 +367,7 @@ form .btn2 {
   font-size: 18px;
   margin-top: 20px;
   cursor: pointer;
-  margin-left: 67%;
+  margin-left: 68.5%;
 }
 .copyright {
   width: 100%;
@@ -420,6 +423,8 @@ nav .fa-solid {
     width: 200px;
     height: 100vh;
     padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
   }
   nav ul li {
     display: block;
@@ -452,12 +457,45 @@ nav .fa-solid {
   .work {
     margin-left: 3%;
   }
+
+  .contact-left,
+  .contact-right {
+    flex-basis: 100%;
+  }
+  .contact-left a i {
+    margin-top: 5%;
+  }
+  .social-icons a i {
+    text-decoration: none;
+    font-size: 60px;
+    margin-right: 18px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+  }
+  .contact-right form {
+    position: absolute;
+    width: 90%;
+  }
+  .btn.btn2 {
+    left: 15%;
+  }
+  form .btn2 {
+    top: -20px;
+    margin-left: 9%;
+  }
+
   .copyright {
     /* width: 100%;
     text-align: center;
     padding: 25px 0;
     background: #262626;
     font-weight: 300; */
-    margin-top: 80%;
+    margin-top: 99%;
   }
+}
+#msg {
+  color: #61b752;
+  display: block;
+  margin-top: 40%;
 }

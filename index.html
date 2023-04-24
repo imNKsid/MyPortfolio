@@ -18,12 +18,12 @@
           <img src="images/nklogo.png" class="logo" />
           <img src="images/nkMobileLogo.png" class="logoMobile" />
           <ul id="sidemenu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
           </ul>
           <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
@@ -34,8 +34,9 @@
             Jharkhand, India
           </h1>
           <h1>
-            I'm currently working as a <br /> 
-            <span> Software Engineer </span> in <br /> Bangalore, India
+            I'm currently working as a <br />
+            <span> Software Engineer </span> in <br />
+            Bangalore, India
           </h1>
         </div>
       </div>
@@ -263,7 +264,7 @@
               <i class="fa-solid fa-envelope"></i>
               imnksid@gmail.com
             </a>
-            <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fa-solid fa-phone"></i> +91 95382 23915</p>
             <div class="social-icons">
               <a href="https://www.linkedin.com/in/niteshnk/" target="_blank">
                 <i class="fa-brands fa-linkedin"></i>
@@ -288,11 +289,11 @@
             </a>
           </div>
           <div class="contact-right">
-            <form>
+            <form name="submit-to-google-sheet">
               <input type="text" name="Name" placeholder="Your Name" required />
               <input
                 type="email"
-                name="email"
+                name="Email"
                 placeholder="Your Email"
                 required
               />
@@ -303,15 +304,18 @@
               ></textarea>
               <button type="submit" class="btn btn2">Submit</button>
             </form>
+            <span id="msg"></span>
           </div>
         </div>
       </div>
     </div>
 
     <div class="copyright">
-      <p>Copyright &copy Nitesh. Made with <i class="fa-solid fa-heart"></i> by Nitesh Kumar</i></p>
+      <p>
+        Copyright &copy Nitesh. Made with <i class="fa-solid fa-heart"></i> by
+        Nitesh Kumar
+      </p>
     </div>
-
 
     <script>
       var tablinks = document.getElementsByClassName("tab-links");
@@ -331,15 +335,37 @@
     </script>
 
     <script>
-      var sidemenu = document.getElementById('sidemenu');
+      var sidemenu = document.getElementById("sidemenu");
 
-      function openmenu(){
-        sidemenu.style.right = '-100px';
+      function openmenu() {
+        sidemenu.style.right = "-100px";
       }
 
-      function closemenu(){
-        sidemenu.style.right = '-260px';
+      function closemenu() {
+        sidemenu.style.right = "-260px";
       }
+    </script>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbw9n1Bbm72XHc07nJgnD9rzryOi_U75HZrWZcynwa4nJjv6wgOhjWMpnnGvL6QGh-czDw/exec";
+      const form = document.forms["submit-to-google-sheet"];
+
+      const msg = document.getElementById("msg");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            console.log("Success!", response);
+            msg.innerHTML = "Message sent successfully";
+            setTimeout(() => {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
     </script>
   </body>
 </html>
