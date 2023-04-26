@@ -80,6 +80,15 @@ nav ul li a:hover::after {
 .header-text h1 span {
   color: #ff004f;
 }
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 95%;
+  background: #000;
+}
+.sticky + .header-text {
+  padding-top: 102px;
+}
 
 /* -------about--------- */
 #about {
