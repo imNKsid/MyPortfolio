@@ -14,7 +14,7 @@
   <body>
     <div id="header">
       <div class="container">
-        <nav>
+        <nav id="stickyHeader">
           <img src="images/nklogo.png" class="logo" />
           <img src="images/nkMobileLogo.png" class="logoMobile" />
           <ul id="sidemenu">
@@ -316,6 +316,23 @@
         Nitesh Kumar
       </p>
     </div>
+
+    <script>
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      var header = document.getElementById("stickyHeader");
+      var sticky = header.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+    </script>
 
     <script>
       var tablinks = document.getElementsByClassName("tab-links");
