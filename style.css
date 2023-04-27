@@ -267,9 +267,10 @@ nav ul li a:hover::after {
 }
 .layer h3 {
   font-weight: 800;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 .layer a {
+  margin-top: 10px;
   margin-bottom: 20px;
   color: #ff004f;
   text-decoration: none;
